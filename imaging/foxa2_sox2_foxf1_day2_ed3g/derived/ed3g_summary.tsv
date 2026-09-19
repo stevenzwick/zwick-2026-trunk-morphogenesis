@@ -1,0 +1,50 @@
+key	value	what it is
+n_cysts	7	cysts pooled, three independent differentiations (folder prefixes 1.3, 1.5, 1.7)
+pixels_pooled	504789	in-region pixels pooled across all seven cysts, same for both panels
+seed	0	notebook's SEED, the dither RNG seed (numpy default_rng)
+jitter	0.5	notebook's JITTER: +/- half an 8-bit quantization step, added before binning only, not before the statistics below
+sub_background	clamp	notebook's SUBBACKGROUND setting for the shipped panel: below-background values are set to zero
+include_bead	False	notebook's INCLUDE_BEAD: the bead is excluded from the analysis region
+histogram_bins	256	notebook's HIST_BINS, bins per axis in each panel's 2-D histogram
+clip_pct	99	notebook's CLIP_PCT: the display histogram is divided by this percentile of normalized bin density and clipped at 1. Affects the panel's colour only -- not the contours, and not any number in this table
+gate_x_raw	15	notebook's GATE_X: positivity gate on the second marker (FOXA2 or SOX2), raw background-subtracted 8-bit units
+gate_y_raw	45	notebook's GATE_Y, both panels: positivity gate on FOXF1, raw units
+xscale_foxa2	48	normalization divisor for the FOXA2 panel's marker axis, printed by the notebook
+xscale_sox2	44	normalization divisor for the SOX2 panel's marker axis, printed by the notebook
+yscale_foxf1	140	normalization divisor for the FOXF1 axis, same image and value in both panels, printed by the notebook
+gate_x_normalized_foxa2_panel	0.3125	gate_x_raw / xscale_foxa2 = 15/48, which terminates exactly at 6 decimals
+gate_x_normalized_sox2_panel	0.340909	gate_x_raw / xscale_sox2 = 15/44 = 0.3409090909..., rounded to 6 decimals, the shipped table's own precision
+gate_y_normalized	0.321429	gate_y_raw / yscale_foxf1 = 45/140 = 0.3214285714..., rounded to 6 decimals, both panels
+at_or_below_background_foxa2_pct	52.3	share of pooled pixels at/below background on the FOXA2 axis, printed by the notebook
+at_or_below_background_foxf1_foxa2_panel_pct	62.8	same, FOXF1 axis, FOXA2 panel
+at_or_below_background_sox2_pct	36.3	share of pooled pixels at/below background on the SOX2 axis
+at_or_below_background_foxf1_sox2_panel_pct	62.8	same, FOXF1 axis, SOX2 panel
+foxa2_notebook_Qll	0.9038	FOXA2 vs FOXF1, printed by the notebook: lower-left, double-negative (n=456249)
+foxa2_notebook_Qlr	0.0608	FOXA2 vs FOXF1, printed by the notebook: lower-right, FOXA2+ FOXF1- (n=30685)
+foxa2_notebook_Qul	0.0321	FOXA2 vs FOXF1, printed by the notebook: upper-left, FOXA2- FOXF1+ (n=16228)
+foxa2_notebook_Qur	0.0032	FOXA2 vs FOXF1, printed by the notebook: upper-right, double-positive (n=1627)
+foxa2_notebook_jaccard_pct	3.35	FOXA2 vs FOXF1, printed by the notebook: double-positive / either-positive
+foxa2_notebook_p_foxf1_given_marker_pct	5.04	FOXA2 vs FOXF1, printed by the notebook: percent of FOXA2+ pixels that are also FOXF1+
+foxa2_notebook_p_marker_given_foxf1_pct	9.11	FOXA2 vs FOXF1, printed by the notebook: percent of FOXF1+ pixels that are also FOXA2+
+foxa2_table_Qll	0.9038	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv: n=456249
+foxa2_table_Qlr	0.0608	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv: n=30685
+foxa2_table_Qul	0.0321	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv: n=16228
+foxa2_table_Qur	0.0032	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv: n=1627
+foxa2_table_jaccard_pct	3.35	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv
+foxa2_table_p_foxf1_given_marker_pct	5.04	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv
+foxa2_table_p_marker_given_foxf1_pct	9.11	FOXA2 vs FOXF1, recomputed from ed3g_per_pixel.tsv
+sox2_notebook_Qll	0.8756	SOX2 vs FOXF1, printed by the notebook: lower-left, double-negative (n=442011)
+sox2_notebook_Qlr	0.0890	SOX2 vs FOXF1, printed by the notebook: lower-right, SOX2+ FOXF1- (n=44923)
+sox2_notebook_Qul	0.0353	SOX2 vs FOXF1, printed by the notebook: upper-left, SOX2- FOXF1+ (n=17833)
+sox2_notebook_Qur	0.0000	SOX2 vs FOXF1, printed by the notebook: upper-right, double-positive (n=22)
+sox2_notebook_jaccard_pct	0.04	SOX2 vs FOXF1, printed by the notebook: double-positive / either-positive
+sox2_notebook_p_foxf1_given_marker_pct	0.05	SOX2 vs FOXF1, printed by the notebook: percent of SOX2+ pixels that are also FOXF1+
+sox2_notebook_p_marker_given_foxf1_pct	0.12	SOX2 vs FOXF1, printed by the notebook: percent of FOXF1+ pixels that are also SOX2+
+sox2_table_Qll	0.8756	SOX2 vs FOXF1, recomputed from ed3g_per_pixel.tsv with the gate compared at the table's 6-decimal precision: n=442011
+sox2_table_Qlr	0.0890	SOX2 vs FOXF1, recomputed the same way: n=44923
+sox2_table_Qul	0.0353	SOX2 vs FOXF1, recomputed the same way: n=17833
+sox2_table_Qur	0.0000	SOX2 vs FOXF1, recomputed the same way: n=22
+sox2_table_jaccard_pct	0.04	SOX2 vs FOXF1, recomputed the same way
+sox2_table_p_foxf1_given_marker_pct	0.05	SOX2 vs FOXF1, recomputed the same way
+sox2_table_p_marker_given_foxf1_pct	0.12	SOX2 vs FOXF1, recomputed the same way
+sox2_table_unrounded_gate_Qlr	0.0703	SOX2 vs FOXF1, recomputed with the gate left at full float precision (15/44) instead of rounded to 6dp: n=35511. 9,416 pixels sit exactly at the rounded gate level 0.340909, which sits 9.09e-8 below the unrounded gate 0.34090909..., so an unrounded >= comparison drops that whole quantization level. See README

@@ -1,0 +1,17 @@
+key	value	what it is
+image_width_px	583	the whole acquired field of the cyst in ED Fig 3n; nothing is cropped
+image_height_px	388	same
+z_plane	6	sixth plane of 14, the plane the panel is drawn from
+dapi_threshold	1000	a pixel enters the analysis if DAPI exceeds this
+pixels_in_dapi_mask	95656	pixels above that threshold
+background_foxf1	1724	constant offset subtracted from FOXF1, read off the whole-image histogram
+background_bmp4	880	same, BMP4
+pixels_above_background	95458	above background in both channels; 19 FOXF1 and 179 BMP4 pixels are not
+clip_percentile	99.9	the brightest 0.1 per cent of each channel is dropped, computed from the data
+clip_cutoff_foxf1	946	the value that percentile gives for FOXF1
+clip_cutoff_bmp4	4966	same, BMP4
+pixels_removed_by_clip	171	dropped by the two cut-offs together
+pixels_retained	95287	pixels the panel and the fit are computed from
+histogram_bins	256	bins per axis in the panel's 2-D histogram
+r_squared_notebook	0.646213469	printed by the notebook from the unrounded values
+r_squared_shipped_table	0.6462135108	from this table, whose values are rounded to 6 decimals

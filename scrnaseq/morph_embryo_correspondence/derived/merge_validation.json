@@ -1,0 +1,8 @@
+{
+  "missing_labels": [],
+  "unused_labels": [],
+  "n_kept_groups": 18,
+  "n_dropped_clusters": 17,
+  "floor_plate_override_source": "<analysis-root>/parity/results/intermediates/07b_human_embryo_floor_plate_subclustering/tables/ivsc_cluster_labels.csv",
+  "nmp_override_source": "<analysis-root>/parity/results/intermediates/07c_human_embryo_nmp_subclustering/tables/nmp_cluster_labels.csv"
+}

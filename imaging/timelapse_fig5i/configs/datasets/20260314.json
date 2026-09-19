@@ -1,0 +1,182 @@
+{
+  "dataset_id": "20260314",
+  "display_name": "2026-03-14-2Dtimelapse",
+  "raw_root_rel": "data/2026-03-14-2Dtimelapse",
+  "raw_kind": "czi_files",
+  "position_glob": null,
+  "primary_timelapse_czi_rel": "data/2026-03-14-2Dtimelapse/Experiment-6321.czi",
+  "auxiliary_czi_file_rels": [
+    "data/2026-03-14-2Dtimelapse/1407.czi",
+    "data/2026-03-14-2Dtimelapse/1420.czi"
+  ],
+  "scene_name_parser": "20260314_embedded_conditions",
+  "frame_interval_min": null,
+  "channel_names": ["BF", "RFP", "YFP"],
+  "ilastik_root_rel": "ilastik/datasets/20260314",
+  "project_name_v1": "20260314_pixelclass_v1.ilp",
+  "training_set_name_v1": "20260314_phase_rfp_curated_v1",
+  "probability_class_names_v1": ["RFP+ nuclei", "RFP-low/negative nuclei", "artifact/dead/junk", "other non-nuclear"],
+  "notes": "Raw data present as scene-structured CZI files. The primary timelapse is Experiment-6321.czi with 48 scenes and 130 timepoints; scene names encode media condition and replicate. A co-author-confirmed well-order condition map is also provided and should be treated as authoritative experimental context.",
+  "scene_block_conditions": [
+    {
+      "start_scene": 0,
+      "end_scene": 3,
+      "block_index": 1,
+      "intended_media_condition": "19 hr BMP pulse + 2nd FOXF1 differentiation media",
+      "block_note": "First well block in acquisition order; 4 locations selected from the same well."
+    },
+    {
+      "start_scene": 4,
+      "end_scene": 7,
+      "block_index": 2,
+      "intended_media_condition": "19 hr pulse + 0.5 μM LDN"
+    },
+    {
+      "start_scene": 8,
+      "end_scene": 11,
+      "block_index": 3,
+      "intended_media_condition": "19 hr + basal media"
+    },
+    {
+      "start_scene": 12,
+      "end_scene": 15,
+      "block_index": 4,
+      "intended_media_condition": "24 hr basal media"
+    },
+    {
+      "start_scene": 16,
+      "end_scene": 19,
+      "block_index": 5,
+      "intended_media_condition": "24 hr + LDN"
+    },
+    {
+      "start_scene": 20,
+      "end_scene": 23,
+      "block_index": 6,
+      "intended_media_condition": "24 hr + differentiation media"
+    },
+    {
+      "start_scene": 24,
+      "end_scene": 27,
+      "block_index": 7,
+      "intended_media_condition": "15 hr basal"
+    },
+    {
+      "start_scene": 28,
+      "end_scene": 31,
+      "block_index": 8,
+      "intended_media_condition": "19 hr LDN"
+    },
+    {
+      "start_scene": 32,
+      "end_scene": 35,
+      "block_index": 9,
+      "intended_media_condition": "19 hr basal"
+    },
+    {
+      "start_scene": 36,
+      "end_scene": 39,
+      "block_index": 10,
+      "intended_media_condition": "19 hr basal"
+    },
+    {
+      "start_scene": 40,
+      "end_scene": 43,
+      "block_index": 11,
+      "intended_media_condition": "19 hr + LDN"
+    },
+    {
+      "start_scene": 44,
+      "end_scene": 47,
+      "block_index": 12,
+      "intended_media_condition": "15 hr + LDN",
+      "block_note": "Condition order confirmed by co-author; wells were arranged away from the air-source well to reduce drying risk."
+    }
+  ],
+  "training_stacks_v1": [
+    {
+      "position_label": "19hrd1p1",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early 19hr d1",
+      "note": "Early d1 field from the primary timelapse for BF-supported nuclei before strong separation."
+    },
+    {
+      "position_label": "19hLDNp1",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early 19hr LDN",
+      "note": "Early LDN condition for weak nuclei and background discrimination."
+    },
+    {
+      "position_label": "19hbasalp1",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early 19hr basal",
+      "note": "Early basal field for comparison to the neighboring d1 and LDN conditions."
+    },
+    {
+      "position_label": "24d1P1",
+      "t_start": 40,
+      "t_end": 45,
+      "category": "mid 24hr d1",
+      "note": "Mid-range d1 scene with denser nuclei and more varied BF morphology."
+    },
+    {
+      "position_label": "24LDNP1",
+      "t_start": 40,
+      "t_end": 45,
+      "category": "mid 24hr LDN",
+      "note": "Mid-range LDN scene for hard-negative and artifact examples."
+    },
+    {
+      "position_label": "24hbasalp1",
+      "t_start": 40,
+      "t_end": 45,
+      "category": "mid 24hr basal",
+      "note": "Mid-range basal scene at a matched acquisition stage."
+    },
+    {
+      "position_label": "15basalP1",
+      "t_start": 70,
+      "t_end": 75,
+      "category": "mid 15hr basal",
+      "note": "15hr basal scene for a different media-history branch in the same microscope setup."
+    },
+    {
+      "position_label": "15hldnP1",
+      "t_start": 70,
+      "t_end": 75,
+      "category": "mid 15hr LDN",
+      "note": "15hr LDN counterpart for condition-specific negative examples."
+    },
+    {
+      "position_label": "19ldnw2P1",
+      "t_start": 95,
+      "t_end": 100,
+      "category": "late-mid 19hr LDN w2",
+      "note": "Late-mid LDN well-2 scene to expose condition-specific variation within 19hr LDN."
+    },
+    {
+      "position_label": "19basalw2P1",
+      "t_start": 95,
+      "t_end": 100,
+      "category": "late-mid 19hr basal w2",
+      "note": "Late-mid basal well-2 scene as a matched counterpart to LDN well 2."
+    },
+    {
+      "position_label": "19basalw3P1",
+      "t_start": 124,
+      "t_end": 129,
+      "category": "latest 19hr basal w3",
+      "note": "Latest basal scene near the end of the movie to capture dense end-state morphology."
+    },
+    {
+      "position_label": "19ldnw3P1",
+      "t_start": 124,
+      "t_end": 129,
+      "category": "latest 19hr LDN w3",
+      "note": "Latest LDN scene for the most challenging late-stage nuclei and artifact patterns."
+    }
+  ]
+}

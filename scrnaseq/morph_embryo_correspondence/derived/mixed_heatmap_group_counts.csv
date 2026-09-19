@@ -1,0 +1,54 @@
+tissue,leiden_mixed,n_cells
+BMP4 Bead Morph,Forebrain / Midbrain,245
+BMP4 Bead Morph,Hindbrain,5
+BMP4 Bead Morph,Floor Plate,2
+BMP4 Bead Morph,Intermediate-Ventral Spinal Cord,99
+BMP4 Bead Morph,Dorsal Spinal Cord,512
+BMP4 Bead Morph,Roof Plate,385
+BMP4 Bead Morph,Neural Crest,357
+BMP4 Bead Morph,Immature Neuron,49
+BMP4 Bead Morph,Posterior Neural Tube,128
+BMP4 Bead Morph,Neuromesodermal Progenitors,12
+BMP4 Bead Morph,Notochord,2
+BMP4 Bead Morph,Presomitic Mesoderm,12
+BMP4 Bead Morph,Early Somite,4
+BMP4 Bead Morph,Mature Somite,140
+BMP4 Bead Morph,Intermediate Mesoderm,134
+BMP4 Bead Morph,Lateral Plate Mesoderm,450
+BMP4 Bead Morph,Endothelial,5
+BMP4 Bead Morph,Non-Neural Ectoderm,17
+No Bead Morph,Forebrain / Midbrain,242
+No Bead Morph,Hindbrain,137
+No Bead Morph,Floor Plate,17
+No Bead Morph,Intermediate-Ventral Spinal Cord,671
+No Bead Morph,Dorsal Spinal Cord,41
+No Bead Morph,Roof Plate,19
+No Bead Morph,Neural Crest,10
+No Bead Morph,Immature Neuron,31
+No Bead Morph,Posterior Neural Tube,608
+No Bead Morph,Neuromesodermal Progenitors,48
+No Bead Morph,Notochord,28
+No Bead Morph,Presomitic Mesoderm,17
+No Bead Morph,Early Somite,33
+No Bead Morph,Mature Somite,794
+No Bead Morph,Intermediate Mesoderm,9
+No Bead Morph,Lateral Plate Mesoderm,21
+No Bead Morph,Non-Neural Ectoderm,22
+Week 3-4 Human Embryo,Forebrain / Midbrain,424
+Week 3-4 Human Embryo,Hindbrain,379
+Week 3-4 Human Embryo,Floor Plate,36
+Week 3-4 Human Embryo,Intermediate-Ventral Spinal Cord,222
+Week 3-4 Human Embryo,Dorsal Spinal Cord,229
+Week 3-4 Human Embryo,Roof Plate,43
+Week 3-4 Human Embryo,Neural Crest,326
+Week 3-4 Human Embryo,Immature Neuron,634
+Week 3-4 Human Embryo,Posterior Neural Tube,43
+Week 3-4 Human Embryo,Neuromesodermal Progenitors,67
+Week 3-4 Human Embryo,Notochord,12
+Week 3-4 Human Embryo,Presomitic Mesoderm,321
+Week 3-4 Human Embryo,Early Somite,226
+Week 3-4 Human Embryo,Mature Somite,760
+Week 3-4 Human Embryo,Intermediate Mesoderm,382
+Week 3-4 Human Embryo,Lateral Plate Mesoderm,811
+Week 3-4 Human Embryo,Endothelial,231
+Week 3-4 Human Embryo,Non-Neural Ectoderm,160

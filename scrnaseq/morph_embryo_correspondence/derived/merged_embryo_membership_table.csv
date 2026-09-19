@@ -1,0 +1,53 @@
+embryo_label,status,merged_group,assignment_rule
+Week 3 / 4 Cardiomyocytes,drop,,excluded from merged correlation analysis
+Week 3 / 4 Erythroid Precursors,drop,,excluded from merged correlation analysis
+Week 3 / 4 Hematopoietic Progenitors,drop,,excluded from merged correlation analysis
+Week 3 Anterior Neuroectoderm,drop,,excluded from merged correlation analysis
+Week 3 Lateral Plate Mesoderm - Craniofacial / Pharyngeal,drop,,excluded from merged correlation analysis
+Week 4 Definitive Endoderm - Fetal Liver,drop,,excluded from merged correlation analysis
+Week 4 Definitive Endoderm - Intestinal,drop,,excluded from merged correlation analysis
+Week 4 Head Mesenchyme - Branchiomeric Muscle Progenitors,drop,,excluded from merged correlation analysis
+Week 4 Head Mesenchyme - First Arch Oral / Palatal Mesenchyme,drop,,excluded from merged correlation analysis
+Week 4 Head Mesenchyme - Frontonasal Mesoderm,drop,,excluded from merged correlation analysis
+Week 4 Head Mesenchyme - Multipotent Progenitors,drop,,excluded from merged correlation analysis
+Week 4 Head Mesenchyme - Pharyngeal Arch Core Mesoderm,drop,,excluded from merged correlation analysis
+Week 4 Lateral Plate Mesoderm - Craniofacial / Pharyngeal,drop,,excluded from merged correlation analysis
+Week 4 Neuron - Hypothalamus / Neuroendocrine,drop,,excluded from merged correlation analysis
+Week 4 Non-Neural Ectoderm - Cranial Placodal,drop,,excluded from merged correlation analysis
+Week 4 Skeletal Myocytes,drop,,excluded from merged correlation analysis
+Week 4 Trunk Mesenchyme,drop,,excluded from merged correlation analysis
+Week 4 Dorsal Spinal Cord,merge_keep,Dorsal Spinal Cord,direct merge from parity 07 embryo label
+Week 3 Early Somite,merge_keep,Early Somite,direct merge from parity 07 embryo label
+Week 3 Endothelial,merge_keep,Endothelial,direct merge from parity 07 embryo label
+Week 4 Endothelial,merge_keep,Endothelial,direct merge from parity 07 embryo label
+Week 4 Dorsal Midbrain,merge_keep,Forebrain / Midbrain,direct merge from parity 07 embryo label
+Week 4 Forebrain - Diencephalon / Telencephalon,merge_keep,Forebrain / Midbrain,direct merge from parity 07 embryo label
+Week 4 Forebrain - Optic Field,merge_keep,Forebrain / Midbrain,direct merge from parity 07 embryo label
+Week 4 Forebrain / Midbrain,merge_keep,Forebrain / Midbrain,direct merge from parity 07 embryo label
+Week 4 Hindbrain,merge_keep,Hindbrain,direct merge from parity 07 embryo label
+Week 4 Neuron - Autonomic / Cholinergic,merge_keep,Immature Neuron,direct merge from parity 07 embryo label
+Week 4 Neuron - CNS Excitatory,merge_keep,Immature Neuron,direct merge from parity 07 embryo label
+Week 4 Neuron - CNS Inhibitory,merge_keep,Immature Neuron,direct merge from parity 07 embryo label
+Week 4 Neuron - Catecholaminergic / Glutamatergic,merge_keep,Immature Neuron,direct merge from parity 07 embryo label
+Week 4 Neuron - Peripheral Sensory,merge_keep,Immature Neuron,direct merge from parity 07 embryo label
+Week 3 Intermediate Mesoderm,merge_keep,Intermediate Mesoderm,direct merge from parity 07 embryo label
+Week 4 Intermediate Mesoderm / Kidney Progenitors,merge_keep,Intermediate Mesoderm,direct merge from parity 07 embryo label
+Week 3 Lateral Plate Mesoderm - Anterior,merge_keep,Lateral Plate Mesoderm,direct merge from parity 07 embryo label
+Week 4 Lateral Plate Mesoderm - Gut Visceral Mesenchyme,merge_keep,Lateral Plate Mesoderm,direct merge from parity 07 embryo label
+Week 4 Lateral Plate Mesoderm - Posterior,merge_keep,Lateral Plate Mesoderm,direct merge from parity 07 embryo label
+Week 4 Lateral Plate Mesoderm - Splanchnic,merge_keep,Lateral Plate Mesoderm,direct merge from parity 07 embryo label
+Week 4 Somite - Dorsal / Dermomyotome,merge_keep,Mature Somite,direct merge from parity 07 embryo label
+Week 4 Somite - Ventral / Sclerotome,merge_keep,Mature Somite,direct merge from parity 07 embryo label
+Week 3 Neural Crest - Early Migratory,merge_keep,Neural Crest,direct merge from parity 07 embryo label
+Week 4 Neural Crest - Derivatives,merge_keep,Neural Crest,direct merge from parity 07 embryo label
+Week 4 Neural Crest - Maturing Cranial,merge_keep,Neural Crest,direct merge from parity 07 embryo label
+Week 3 Non-Neural Ectoderm,merge_keep,Non-Neural Ectoderm,direct merge from parity 07 embryo label
+Week 4 Non-Neural Ectoderm - Surface Ectoderm,merge_keep,Non-Neural Ectoderm,direct merge from parity 07 embryo label
+Week 3 / 4 Notochord,merge_keep,Notochord,direct merge from parity 07 embryo label
+Week 3 Presomitic Mesoderm - Anterior,merge_keep,Presomitic Mesoderm,direct merge from parity 07 embryo label
+Week 3 Presomitic Mesoderm - Posterior,merge_keep,Presomitic Mesoderm,direct merge from parity 07 embryo label
+Week 4 Roof Plate,merge_keep,Roof Plate,direct merge from parity 07 embryo label
+Week 4 Intermediate-Ventral Spinal Cord,split_keep,Floor Plate,07b IVSC subcluster 'Floor Plate-like'
+Week 4 Intermediate-Ventral Spinal Cord,split_keep,Intermediate-Ventral Spinal Cord,all remaining 07b IVSC cells
+Week 3 Posterior Neural Tube / Neuromesodermal Progenitors,split_keep,NMP,07c PNT/NMP subcluster labeled 'NMP'
+Week 3 Posterior Neural Tube / Neuromesodermal Progenitors,split_keep,Posterior NT,all remaining 07c PNT/NMP cells

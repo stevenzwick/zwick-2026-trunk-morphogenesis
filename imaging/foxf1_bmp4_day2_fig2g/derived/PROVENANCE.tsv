@@ -1,0 +1,4 @@
+source_path	dest_name	bytes	sha256
+imaging/foxf1_bmp4_day2_fig2g/derived/fig2g_histogram_counts.tsv, written by the last cell of notebooks/03_global_q995_density_review.ipynb run on the 14 raw stacks	fig2g_histogram_counts.tsv	84621	8f9f9663e7a28ee2f285693fab206c1c29b372e86dba6a3dd5f517a961156e30
+imaging/foxf1_bmp4_day2_fig2g/derived/fig2g_bin_edges.tsv, written by the last cell of notebooks/03_global_q995_density_review.ipynb run on the 14 raw stacks	fig2g_bin_edges.tsv	4969	bdfa3358298eeb22322a7e8aa63f00e0d873473c2185a83aac4781dfeb05eaaf
+imaging/foxf1_bmp4_day2_fig2g/derived/fig2g_summary.tsv, written by the last cell of notebooks/03_global_q995_density_review.ipynb run on the 14 raw stacks	fig2g_summary.tsv	1434	2adb69494c02750354f7306d9c31b35c6f9a530b3ba843c1819464333c9cf04c

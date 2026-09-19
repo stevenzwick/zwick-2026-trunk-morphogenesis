@@ -1,0 +1,3 @@
+source_path	dest_name	bytes	sha256
+"Source Data Extended Data Fig.3.xlsx, sheet ""Extended Data Fig.3o"""	ed3o_per_pixel.tsv	1715199	39bbb99d894b0fc6318f5bc1fd5a8e6989776069848a6c6b4ba49ad10fee09cc
+BMP-FOXF1 correlation-20260918.ipynb, cells 3-9 and 15	ed3o_summary.tsv	1115	89a97c1ada9937bec6f7c18ef70548d384cba0b8f7bf9beea238f56086f7060c

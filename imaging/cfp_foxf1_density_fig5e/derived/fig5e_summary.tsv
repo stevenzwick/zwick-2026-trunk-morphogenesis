@@ -1,0 +1,11 @@
+quantity	value	description
+n_stacks	3	image stacks pooled
+pixel_count	64909150	pixels above the DAPI cutoff, pooled over all z planes of all stacks
+dapi_cutoff	20	a pixel is included if its DAPI intensity is above this
+bins	256	bins per axis
+cfp_gate	80	CFP gate (vertical dashed line); CFP+ means at or above it
+foxf1_gate	65	FOXF1 gate (horizontal dashed line); FOXF1+ means at or above it
+pixels_Qll	60995967	pixels in quadrant CFP-/FOXF1-
+pixels_Qlr	1518128	pixels in quadrant CFP+/FOXF1-
+pixels_Qul	2352726	pixels in quadrant CFP-/FOXF1+
+pixels_Qur	42329	pixels in quadrant CFP+/FOXF1+

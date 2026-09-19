@@ -1,0 +1,4 @@
+source_path	dest_name	bytes	sha256
+imaging/cfp_foxf1_density_fig5e/output/derived/fig5e_histogram_counts.tsv, written by the last cell of notebooks/cfp_foxf1_pixel_density.ipynb run on the three image stacks	fig5e_histogram_counts.tsv	331861	acf70694c8b2d31f1c8ea0f07b61e7ccfeaf715fdb8bc0ff8928e3fc71fffbec
+imaging/cfp_foxf1_density_fig5e/output/derived/fig5e_bin_edges.tsv, written by the last cell of notebooks/cfp_foxf1_pixel_density.ipynb run on the three image stacks	fig5e_bin_edges.tsv	12144	c0ab310e06664551dc25dfa1fc4dc3106816b1eae8f7f27cdf4a062a88506a99
+imaging/cfp_foxf1_density_fig5e/output/derived/fig5e_summary.tsv, written by the last cell of notebooks/cfp_foxf1_pixel_density.ipynb run on the three image stacks	fig5e_summary.tsv	591	a11aa1a24133232458fd33e5729649f7e414eae054c5995f7ee1906ce7095901

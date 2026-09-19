@@ -1,0 +1,51 @@
+# Exact versions of the interpreter used for the published analysis, recorded 2026-09-14.
+# conda `base` was the de-facto lock: there was no lockfile. Install via env/environment.yml;
+# this file is the verbatim record to check an installation against.
+python==3.12.4
+scanpy==1.10.3
+anndata==0.12.7
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+scikit-learn==1.4.2
+numba==0.59.1
+leidenalg==0.10.2
+igraph==0.11.6
+matplotlib==3.8.4
+seaborn==0.13.2
+h5py==3.15.1
+openpyxl==3.1.2
+statsmodels==0.14.6
+networkx==3.2.1
+umap-learn==0.5.6
+pynndescent==0.5.13
+cmcrameri==1.9
+aicspylibczi==3.3.1
+scikit-image==0.23.2
+tifffile==2023.4.12
+Pillow==10.3.0
+requests==2.32.2
+
+# --- Added 2026-09-14 -------------------------------------------------------------------------
+# An import scan of the shipped code found packages it uses that this file did not pin. Versions
+# below are read from the same interpreter as the block above.
+ipython==8.25.0
+ipywidgets==8.1.8
+jupyterlab==4.0.11
+notebook==7.0.8
+bbknn==1.6.0
+leidenalg==0.10.2
+igraph==0.11.6
+umap-learn==0.5.6
+czifile==2019.7.2.1
+
+# --- Imported by shipped code but NOT installed in this interpreter -----------------------------
+# Deliberately unpinned rather than guessed. These ran elsewhere, and a fabricated version would be
+# worse than an absent one:
+#   ray          SMD feature selection, on a SLURM cluster node under Python 3.10.13,
+#                not on this workstation - see smd/README.md
+#   cellpose     nuclear segmentation (imaging/bmpr1a_psmad/scripts/01_segment_nuclei.py)
+#   torch        cellpose's backend
+#   opencv-python  two imaging scripts
+# Ilastik 1.4.0 (pixel classification) is a separate application, not a Python package. The version
+# is the one stored in the classifier project files that produced the timelapse masks.

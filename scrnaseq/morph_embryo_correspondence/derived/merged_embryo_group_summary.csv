@@ -1,0 +1,19 @@
+merged_group,n_member_clusters,members,assignment_rule
+Forebrain / Midbrain,4,Week 4 Forebrain / Midbrain | Week 4 Forebrain - Optic Field | Week 4 Forebrain - Diencephalon / Telencephalon | Week 4 Dorsal Midbrain,direct merge from parity 07 embryo labels
+Hindbrain,1,Week 4 Hindbrain,direct merge from parity 07 embryo labels
+Floor Plate,1,Week 4 Intermediate-Ventral Spinal Cord,07b IVSC cells labeled 'Floor Plate-like'
+Intermediate-Ventral Spinal Cord,1,Week 4 Intermediate-Ventral Spinal Cord,all remaining 07b IVSC cells
+Dorsal Spinal Cord,1,Week 4 Dorsal Spinal Cord,direct merge from parity 07 embryo labels
+Roof Plate,1,Week 4 Roof Plate,direct merge from parity 07 embryo labels
+Neural Crest,3,Week 3 Neural Crest - Early Migratory | Week 4 Neural Crest - Derivatives | Week 4 Neural Crest - Maturing Cranial,direct merge from parity 07 embryo labels
+Immature Neuron,5,Week 4 Neuron - CNS Excitatory | Week 4 Neuron - CNS Inhibitory | Week 4 Neuron - Catecholaminergic / Glutamatergic | Week 4 Neuron - Peripheral Sensory | Week 4 Neuron - Autonomic / Cholinergic,direct merge from parity 07 embryo labels
+Posterior NT,1,Week 3 Posterior Neural Tube / Neuromesodermal Progenitors,all remaining 07c PNT/NMP parent cells
+NMP,1,Week 3 Posterior Neural Tube / Neuromesodermal Progenitors,07c PNT/NMP cells labeled 'NMP'
+Notochord,1,Week 3 / 4 Notochord,direct merge from parity 07 embryo labels
+Presomitic Mesoderm,2,Week 3 Presomitic Mesoderm - Posterior | Week 3 Presomitic Mesoderm - Anterior,direct merge from parity 07 embryo labels
+Early Somite,1,Week 3 Early Somite,direct merge from parity 07 embryo labels
+Mature Somite,2,Week 4 Somite - Dorsal / Dermomyotome | Week 4 Somite - Ventral / Sclerotome,direct merge from parity 07 embryo labels
+Intermediate Mesoderm,2,Week 4 Intermediate Mesoderm / Kidney Progenitors | Week 3 Intermediate Mesoderm,direct merge from parity 07 embryo labels
+Lateral Plate Mesoderm,4,Week 3 Lateral Plate Mesoderm - Anterior | Week 4 Lateral Plate Mesoderm - Splanchnic | Week 4 Lateral Plate Mesoderm - Posterior | Week 4 Lateral Plate Mesoderm - Gut Visceral Mesenchyme,direct merge from parity 07 embryo labels
+Endothelial,2,Week 3 Endothelial | Week 4 Endothelial,direct merge from parity 07 embryo labels
+Non-Neural Ectoderm,2,Week 4 Non-Neural Ectoderm - Surface Ectoderm | Week 3 Non-Neural Ectoderm,direct merge from parity 07 embryo labels

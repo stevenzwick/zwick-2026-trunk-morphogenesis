@@ -1,0 +1,38 @@
+# Large data — fetched, never committed. See data/DOWNLOAD.md
+data/**
+!data/DOWNLOAD.md
+!data/**/README.md
+*.h5ad
+!scrnaseq/trunk_main/objects/adata_morph_SMD_.h5ad
+*.npz
+*.npy
+*.czi
+*.tif
+*.tiff
+# Inputs the scRNA-seq notebooks read but do not create; see scrnaseq/chain_inputs/README.md
+!scrnaseq/chain_inputs/**/*.npy
+!scrnaseq/chain_inputs/**/*.h5ad
+
+# Notebook / Python noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.mplconfig/
+
+# Environments
+.venv/
+env/.conda/
+
+# Rendered panels are generated, not source
+figures/output/
+
+# Local agent wiring; points at private scaffolding outside this repo
+CLAUDE.md
+
+# Script outputs, written beside their lane
+imaging/*/output/
+bulkseq/output/
+scrnaseq/output/
+# The morphometry helpers point matplotlib's font cache here
+imaging/morphometry/results/tmp/

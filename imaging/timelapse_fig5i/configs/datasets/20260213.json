@@ -1,0 +1,86 @@
+{
+  "dataset_id": "20260213",
+  "display_name": "20260213_2D_BMP4-reporter_LPMdiff_d0-d2",
+  "raw_root_rel": "data/20260213_2D_BMP4-reporter_LPMdiff_d0-d2/d1-d3",
+  "raw_kind": "position_tiffs",
+  "position_glob": "1-Pos*",
+  "frame_interval_min": 10.0,
+  "channel_names": ["BF", "RFP", "YFP"],
+  "ilastik_root_rel": "ilastik/datasets/20260213",
+  "project_name_v1": "pixelclass_v1.ilp",
+  "training_set_name_v1": "phase_rfp_curated_v1",
+  "probability_class_names_v1": ["RFP+ nuclei", "RFP-low/negative nuclei", "artifact/dead/junk", "other non-nuclear"],
+  "notes": "Current main dataset. Ilastik assets now live under the top-level ilastik/datasets/20260213 tree; legacy 03c-era batch-processing files are retained there as batch_processing_data_v0 for backward compatibility.",
+  "training_stacks_v1": [
+    {
+      "position_label": "1-Pos009_012",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early dropout hard case",
+      "note": "Extended early dropout window for BF-supported nuclei that temporarily undercall in pixel classification."
+    },
+    {
+      "position_label": "1-Pos010_014",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early reference mixed",
+      "note": "Clean early field with mixed RFP-positive and likely RFP-low nuclei across a longer temporal window."
+    },
+    {
+      "position_label": "1-Pos013_017",
+      "t_start": 0,
+      "t_end": 5,
+      "category": "early corner sparse",
+      "note": "Sparse early corner tile with longer temporal context for BF-defined nuclei and negative background examples."
+    },
+    {
+      "position_label": "1-Pos009_017",
+      "t_start": 80,
+      "t_end": 85,
+      "category": "mid transition edge",
+      "note": "Upper-edge tile with moderate density and background structure variation over 6 consecutive frames."
+    },
+    {
+      "position_label": "1-Pos011_014",
+      "t_start": 80,
+      "t_end": 85,
+      "category": "mid transition center",
+      "note": "Central reference field during the mixed BF/RFP transition regime with longer temporal context."
+    },
+    {
+      "position_label": "1-Pos013_012",
+      "t_start": 150,
+      "t_end": 155,
+      "category": "mid crowded lower-left",
+      "note": "Crowded mid-to-late field with touching nuclei and harder separation over 6 consecutive frames."
+    },
+    {
+      "position_label": "1-Pos011_014",
+      "t_start": 150,
+      "t_end": 155,
+      "category": "mid crowded center",
+      "note": "Central crowded field for compact nuclei, weak nuclei, and halo negatives with longer temporal context."
+    },
+    {
+      "position_label": "1-Pos010_017",
+      "t_start": 220,
+      "t_end": 225,
+      "category": "late crowded upper-right",
+      "note": "Late crowded field with brighter RFP and more frequent junk-like structures over 6 consecutive frames."
+    },
+    {
+      "position_label": "1-Pos012_015",
+      "t_start": 220,
+      "t_end": 225,
+      "category": "late mixed center-right",
+      "note": "Late center-right field with mixed signal strength and non-nuclear texture over 6 consecutive frames."
+    },
+    {
+      "position_label": "1-Pos013_017",
+      "t_start": 294,
+      "t_end": 299,
+      "category": "latest dense lower-right",
+      "note": "Latest dense field for late morphology, debris discrimination, and crowded nuclei with the maximum available 6-frame window."
+    }
+  ]
+}

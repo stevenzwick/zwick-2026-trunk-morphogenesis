@@ -1,0 +1,98 @@
+# Canonical environment for the trunk morph / embryo analyses.
+#
+# NOTE ON PROVENANCE: the original analyses were not run from a lockfile. They ran in the
+# author's conda `base` environment, which is therefore the de-facto lock. Versions below were
+# read directly from that interpreter on 2026-09-14 and match the kernels recorded in the
+# executed notebooks. Pinning matters: numpy 2.x is NOT interchangeable with the 1.26.x used here.
+#
+# The pinned block is what produced the published figures. The unpinned block below it covers
+# packages the shipped code imports but which were not part of that core: an audit found them by
+# scanning imports rather than the interpreter, which is a different and larger set. They are left
+# unpinned because the published figures do not depend on their exact versions.
+#
+# Every package the shipped code imports is declared here, except three that are deliberately
+# absent and named at the bottom of this file. This was checked by parsing the imports out of all
+# tracked .py and .ipynb files and diffing against this list - four packages had been missing,
+# including scikit-image and tifffile, which between them are imported by 86 files.
+name: trunk-morph
+channels: [conda-forge, bioconda, defaults]
+dependencies:
+  - python=3.12.4
+  - numpy=1.26.4
+  - scipy=1.13.1
+  - pandas=2.2.2
+  - scikit-learn=1.4.2
+  - numba=0.59.1
+  - h5py=3.15.1
+  - matplotlib=3.8.4
+  - seaborn=0.13.2
+  - scikit-image=0.23.2   # segmentation, morphology, thresholding - imported by 39 files
+  - tifffile=2023.4.12    # TIFF image IO - imported by 47 files
+  - pillow=10.3.0         # image IO
+  - ipython=8.25.0        # the notebooks' kernel
+  - networkx=3.2.1
+  - statsmodels=0.14.6
+  - openpyxl=3.1.2
+  - pip
+  - cmcrameri          # batlow, the colour map used by the heatmaps and dot plots
+  - opencv             # imported by the timelapse QC/normalisation helpers
+  - pip:
+      # pip runs AFTER conda and does not respect conda's pins. Repeating numpy and numba here,
+      # at the versions the conda block already pins, is what stops pip's resolver from
+      # uninstalling them to satisfy a transitive requirement. Without these two lines pip
+      # silently replaced numpy 1.26.4 with 2.2.6 and numba 0.59.1 with 0.67.0, which broke
+      # `import skimage` outright - conda's scikit-image is built against numpy 1.x - and with
+      # it the 37 files that import it. The figure verification still passed, because none of
+      # it imports skimage, so the breakage was invisible from the panels alone.
+      - numpy==1.26.4
+      - numba==0.59.1
+      - scanpy==1.10.3
+      - anndata==0.12.7
+      - leidenalg==0.10.2
+      - igraph==0.11.6
+      - umap-learn==0.5.6
+      # scanpy's neighbour graph (sc.pp.neighbors) uses pynndescent for approximate nearest neighbours.
+      # 0.6.0, which an unpinned install resolves to, returns a different graph on the 46,116-cell human
+      # embryo data and so a different Leiden clustering; 0.5.13 is the version that produced the figures.
+      - pynndescent==0.5.13
+      # --- imported by shipped code, not part of the core figure environment ---
+      # Pinned to requirements-freeze.txt. Left unpinned, each resolved to a much later release
+      # (aicspylibczi 4.0.0, czifile 2026.8.16) whose dependencies drag numpy forward.
+      - aicspylibczi==3.3.1   # the CZI reader. czifile is deliberately absent - see below.
+      - bbknn==1.6.0          # batch correction in one correspondence script
+      - ipywidgets==8.1.8     # interactive review widgets in two QC notebooks
+      # Notebook execution for the two imaging runners: imaging/morphometry/scripts/run_notebook_chain.py
+      # calls `jupyter nbconvert`, imaging/foxf1_bmp4_day2_fig2g/scripts/execute_pipeline_notebooks.py uses
+      # nbclient. Versions read from the authoring interpreter on 2026-09-16.
+      - nbclient==0.8.0
+      - nbformat==5.9.2
+      - nbconvert==7.10.0
+      - ipykernel==6.28.0
+      - imageio==2.33.1       # the Fig 5e notebook's TIFF reader; authoring interpreter's version on 2026-09-17
+      # Nuclear segmentation for the BMPR1A pSMAD validation only. Heavy, and needed by one
+      # script; install separately if you intend to re-run segmentation.
+      # - cellpose
+      # - torch
+
+# --- Deliberately NOT installed here -----------------------------------------------------------
+# ray        the SMD feature-selection step ran on a SLURM cluster node under Python 3.10,
+#            not on a workstation. Its outputs are committed so everything downstream runs
+#            without it. See smd/README.md.
+# cellpose   } nuclear segmentation for the BMPR1A pSMAD validation only. Heavy; uncomment the
+# torch      } two lines in the pip block above if you intend to re-run segmentation.
+#
+# czifile    NOT INSTALLABLE here, and superseded. Two independent reasons:
+#            (1) Correctness. It mis-frames odd-sized acquisitions: on a 1024x1024 file it
+#                returns a 1025-row frame with the true image at a channel-dependent offset,
+#                so a DAPI mask and its marker channels can be misaligned by a pixel. Verified
+#                on 39 local acquisitions - 29 even-sized files read byte-identically to
+#                aicspylibczi, all 9 odd-sized ones differ, and the difference is not a crop.
+#            (2) Installability. The 2019 release the authoring environment had calls
+#                imagecodecs.jxr_decode, renamed jpegxr_decode in modern imagecodecs, so it
+#                raises AttributeError on import; the current release resolves numpy to 2.5.x,
+#                which breaks the pinned scipy and numba. No version of czifile works here.
+#            Shipped code now reads CZIs through src/trunk_morph_ref/czi_compat.py, which
+#            presents czifile's interface over libCZI. Three mosaic scripts that need czifile's
+#            internal subblock directory have no equivalent and say so at their import.
+#
+# Ilastik 1.4.0 is used for pixel classification and is a separate application, not a Python package.

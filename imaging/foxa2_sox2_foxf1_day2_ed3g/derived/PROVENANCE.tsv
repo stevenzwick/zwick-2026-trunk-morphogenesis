@@ -1,0 +1,3 @@
+source_path	dest_name	bytes	sha256
+"SourceData_ED3_2026-09-17_1958.xlsx, sheet ""Extended Data Fig.3g"""	ed3g_per_pixel.tsv	18677284	0ec4b9e9ad7cb2cd1764430473bd82c13b37acce21ddfa1fd03c9a8fbc0e38f3
+day2 analysis(FOXA2_SOX2)-20260916.ipynb rev 2026-09-19, cells 1, 5 and 7	ed3g_summary.tsv	5249	835a1ac3288bb4335cc14b3c5dd57658b96a5ab8e39d15301dbddec6d1f6dd72
