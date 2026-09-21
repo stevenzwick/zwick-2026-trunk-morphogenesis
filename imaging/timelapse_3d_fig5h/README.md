@@ -29,6 +29,25 @@ Both rules live in `figures/panel_specs.py::prepare_halfmax`.
 9 metrics). The figure uses two of those nine. `notebooks/` and `scripts/` carry the QC,
 normalisation and Ilastik-based segmentation chain that produced it, with one exception below.
 
+`derived/04b_background_stability_outliers.tsv` — the background-stability QC result, one row per
+flagged position and reporter. Six positions are flagged: Pos1, Pos2, Pos3, Pos9, Pos10 and Pos17.
+`notebooks/04b_reporter_background_stability_qc.ipynb` writes it and holds the criterion:
+after early-offset alignment, a reporter is flagged when its background stays at or beyond 4σ
+robust-z from the dataset-wide aggregate background trend for at least 8 consecutive frames
+(`MAIN_ALIGNED_Z_THRESHOLD = 4.0`, `MAIN_ALIGNED_Z_RUN = 8`), plus a separate RFP late-tail rule
+that fires on 8 consecutive frames at or below −2.25σ within the last 35 frames
+(`RFP_LATE_LOW_TAIL_Z_THRESHOLD = -2.25`, `RFP_LATE_LOW_TAIL_RUN = 8`,
+`RFP_LATE_LOW_TAIL_LAST_FRAMES = 35`). Each row carries the rule that fired, the severity score, and
+the frame and hour at which the flag first and last applies.
+
+**The two panels in this lane use this table differently, which is why their n differ.**
+`notebooks/05b_reporter_spatial_context.ipynb` (ED Fig 10d) drops the six flagged positions when
+it builds its pixel sample, so that panel is 59 of the 65 imaged positions.
+`notebooks/05_preliminary_reporter_quantification.ipynb` (Fig 5h) loads the same table for QC
+review and montage display only and never filters the half-max computation, so Fig 5h is all 65.
+The shipped `derived/05_cooperativity_halfmax_times.tsv` therefore contains all 65 positions,
+including the six flagged ones.
+
 ⚠️ **One hand-curated input is not in this repository.**
 `results/qc/02_phase_artifact_excluded_frames.tsv` lists the frames dropped for phase artifacts.
 `scripts/io/postprocess_ilastik_organoid_masks.py` and `notebooks/02_retained_frame_mask_review.ipynb`
