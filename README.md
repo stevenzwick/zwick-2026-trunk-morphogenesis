@@ -110,6 +110,10 @@ conda env create -f env/environment.yml
 conda activate trunk-morph
 ```
 
+Timed on an Apple-silicon Mac: `conda env create` took 55 s with the packages already in conda's
+cache. A first install has to download about 1.5 GB, so allow 10–15 minutes on an ordinary
+connection. The created environment is 1.7 GB on disk.
+
 ## Data
 
 Raw data and the large AnnData objects are not committed. `data/DOWNLOAD.md` lists the GEO
@@ -228,6 +232,11 @@ python imaging/foxf1_bmp4_cyst_ed3o/scripts/render_ed3o_panel.py   # ED Fig 3o, 
 OBJECT_ROOT=/path/to/analysis python figures/render_scrnaseq_panels.py   # Fig 4b, 4c, 4e and ED Fig 9b's values; add SOURCE_DATA_DIR for Fig 4a and 4f
 python bulkseq/run_bulk_notebooks.py     # ED Fig 3b, 3c, 3j, 10g; needs the GSE347564 CPM table
 ```
+
+Timed on the same machine: `bash run_all.sh` took 2.8 s, and the five per-lane panel scripts listed
+above took 4.3 s between them. Everything here is table reading and plotting, so the whole set
+finishes in seconds rather than minutes; the steps that would take real time are the pipeline
+stages, which are not run.
 
 `run_all.sh` does not re-run the pipeline stages or the bulk RNA-seq notebooks. The stages are the
 notebooks under `imaging/` and `scrnaseq/`: the imaging stages need the raw images, and the single-cell
