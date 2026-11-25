@@ -1,7 +1,7 @@
 # Trunk morphogenesis: localized signaling centers
 
-Analysis code for "Engineering signaling centers to trigger human trunk morphogenesis in vitro"
-(Nature, in press).
+Analysis code for "Engineering signalling centres to trigger human trunk morphogenesis in vitro"
+(He et al., *Nature*, 2026, https://doi.org/10.1038/s41586-026-11326-5).
 
 The repository is for reproducibility, not reuse as a package. It is organized so that a reader
 asking how a particular panel was made reaches the answer in one step.
@@ -251,5 +251,8 @@ normalisation, axes — not pixel for pixel.
 
 ## Citing
 
-See `CITATION.cff`. The archived release on Zenodo has the DOI 10.5281/zenodo.22756591; cite that
-rather than a commit hash.
+Please cite the paper: He, T. et al. Engineering signalling centres to trigger human trunk
+morphogenesis in vitro. *Nature* (2026). https://doi.org/10.1038/s41586-026-11326-5
+
+To cite the code, use the archived release on Zenodo, DOI 10.5281/zenodo.22756591, rather than a
+commit hash. Both are in `CITATION.cff`.

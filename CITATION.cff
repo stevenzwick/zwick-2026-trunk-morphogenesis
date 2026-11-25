@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the paper and the archived release."
-title: "Analysis code for: Engineering signaling centers to trigger human trunk morphogenesis in vitro"
+title: "Analysis code for: Engineering signalling centres to trigger human trunk morphogenesis in vitro"
 abstract: >-
   Image analysis, single-cell RNA-seq and bulk RNA-seq analysis code for the trunk morph study, with
   the SMD runner scripts and the derivative measurement tables the quantitative imaging panels are
@@ -24,3 +24,26 @@ repository-code: "https://github.com/stevenzwick/zwick-2026-trunk-morphogenesis"
 doi: "10.5281/zenodo.22756591"   # version DOI, reserved 2026-09-14 — pins the exact release
                                  # described in the paper
 type: software
+preferred-citation:
+  type: article
+  title: "Engineering signalling centres to trigger human trunk morphogenesis in vitro"
+  authors:
+    - family-names: He
+      given-names: Tianlei
+    - family-names: Zwick
+      given-names: Steven
+    - family-names: Yaman
+      given-names: Yusuf Ilker
+    - family-names: Chappleboim
+      given-names: Alon
+    - family-names: Johnston
+      given-names: Josephine
+    - family-names: Weitz
+      given-names: David A.
+    - family-names: Ramanathan
+      given-names: Sharad
+  journal: Nature
+  year: 2026
+  month: 11
+  doi: "10.1038/s41586-026-11326-5"
+  url: "https://www.nature.com/articles/s41586-026-11326-5"
